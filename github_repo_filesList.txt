@@ -1,14 +1,7 @@
-Step 1: Distances calc. script (Peptide residues' C-alpha atom or C-beta atom Vs all kinase atoms)
-('dists_calc_advcd_auto.py') + kinase_ed.pdb file + peptide.pdb file > Outputs files '1.csv'; '2.csv', etc (numbered accdg. to the peptide's residue).
+Step 1: Peptide A.A. Vs Kinase A.A. distance matrices script (Peptide residues' C-alpha atom or C-beta atom Vs all atoms of a kinase)
+(dists_mat.py + kinase.pdb file + peptide.pdb file)
+Output> kinase_CA.txt and kinase_CB.txt files
 
-Step 2: Fetching the kinase residues' atom instances within 8 Angstroms.
-'res_fetcher_advcd_opt_auto.py' + input data files (above made peptide residues' distances files e.g. '1.csv') > Output file is "res_alpha.txt" or "res_beta.txt"
-
-
-Step 3: Peptide A.A. Vs Kinase A.A. matrices making script
-'resmat_distmat_maker_roundoff_advcd.py' + Input file ('res_alpha.txt' or 'res_beta.txt') + kinase_ed.pdb file (just for naming the outfile by resp. kinase) > Output file (e.g. 'pknG_dists.txt')
-
-
-Step 4: BTPP and Compatibility features' calculation
-'allcompFeats_mostAdvcd.py' + input files (peptide sequences file e.g. 'rabbit_phkg1_subs_info_new.csv' + 'btpp_ed.csv' + 'charge compatibility_ed.csv' + 'hydropathy compatibility_ed.csv' + 'size compatibility_ed.csv' + dists_files = ['2phk_resdists_alpha.txt', '2phk_resdists_beta.txt'] 
+Step 2: Calculation of BTPP and amino acids compatibility features
+'allcompFeats.py' + input files (peptide sequences file e.g. 'rabbit_phkg1_subs_info_new.csv' + 'btpp_ed.csv' + 'charge compatibility_ed.csv' + 'hydropathy compatibility_ed.csv' + 'size compatibility_ed.csv' + dists_files = ['2phk_CA.csv' and '2phk_CB.csv']
 Output file: E.g. '2phk_144feats.csv'
