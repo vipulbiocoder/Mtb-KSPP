@@ -11,4 +11,6 @@ Step 3: Add the Intrinsic disorder (IDR) feature values of all STPKs as the 145t
 Step4: Scale the file using the script 'scale_features.py' and convert its output in the LibSVM format using the scripts 'libsvm_fmt_advcd_train.py' and 'libsvm_fmt_advcd_test.py'. Please note that one-thirds of the training data instances of each Mtb STPK were held-out from each STPK's file (total of 73/221 positive data instances/rows and 73/221 of the negative data instances/rows total 146 instances) for making the test data file of Mtb instances.
 
 Step 4:
-Run the file svm-predict.py available in a LibSVM environment using the sample input files 'pknB_input_smpl.txt' and 'kspp.model' to generate the predictions on the sample file of the kinase PknB. The size of each of the 11 files of prediction input datasets is huge (~400 Mb each), therefore only a sample file of ten instances has been uploaded here. The entire file/s would be shared with any interested research group through Google Drive.
+Run the file svm-predict.py available in a LibSVM environment using the sample input files 'pknB_input_smpl.txt' and 'kspp.model' to generate the predictions on the sample file of the kinase PknB. The predictions can be mapped back to a Mtb protein's heptapeptides using the sample file 'mtb_TSsites_smpl.csv'.
+
+Please Note: The size of each of the 11 files of prediction input datasets is huge (~400 Mb each), therefore only a sample file of ten instances has been uploaded here. The entire file/s would be shared with any interested research group through Google Drive.
