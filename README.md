@@ -1,5 +1,5 @@
 # Mtb-KSPP
-This file details the steps to generate the phosphosite predictions using sample input data files to generate the data features and generate the predictions using the sample test data file and svm model files.
+This file details the steps to generate the phosphosite predictions using sample input data files to generate the data features and generate the predictions using the sample test data file and svm model files. Uncompress all the folders to get the files used in the following steps.
 
 Step 1:
 Run the python scripts 'aacomp_feats.py' and 'aacomp_negfeats.py' on a command line using the input files supplied in this bundle as inputs for the scripts. The output file contains the amino acid compatibility features for the peptide residues with the kinase residues. This results in 144 feature values for each heptapeptide sequence (positive or negative instance).
